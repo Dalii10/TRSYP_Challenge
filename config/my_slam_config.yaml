@@ -1,0 +1,19 @@
+slam_toolbox:
+  ros__parameters:
+    use_sim_time: false   # mettre true si tu travailles avec une simulation
+
+    # === Frames ===
+    odom_frame: odom
+    map_frame: map
+    base_frame: base_footprint
+
+    # === LiDAR ===
+    scan_topic: /scan
+
+    # === Options SLAM ===
+    mode: mapping
+    resolution: 0.05          # résolution carte (5 cm par cellule)
+    max_laser_range: 8.0      # portée max de ton LiDAR (ajuste selon ton modèle)
+    minimum_time_interval: 0.5
+    transform_publish_period: 0.02
+    map_update_interval: 2.0
