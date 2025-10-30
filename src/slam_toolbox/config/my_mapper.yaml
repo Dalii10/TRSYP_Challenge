@@ -1,0 +1,16 @@
+slam_toolbox:
+  ros__parameters:
+    # Configuration critique pour éviter les pertes
+    message_filter_queue_size: 1  # Ne garde que le dernier message
+    throttle_scans: 3            # Traite 1 scan sur 3
+    minimum_time_interval: 0.3    # 300ms entre chaque traitement
+    # Désactivez les fonctionnalités gourmandes
+    do_loop_closing: false
+    enable_interactive_mode: false
+    # Optimisations CPU
+    ceres_max_num_iterations: 20
+    ceres_num_threads: 1
+    resolution: 0.1               # Résolution plus grossière
+    # Configuration LiDAR
+    max_laser_range: 10.0
+    scan_topic: "/scan_filtered"  # Utilisez un topic filtré
